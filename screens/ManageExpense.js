@@ -12,11 +12,17 @@ export default function ManageExpense({ route, navigation }) {
   const { expenseId } = route.params || '';
   const isEditing = !!expenseId;
 
-  function deleteExpenseHandler() {}
+  function deleteExpenseHandler() {
+    navigation.goBack();
+  }
 
-  function cancelHandler() {}
+  function cancelHandler() {
+    navigation.goBack();
+  }
 
-  function confirmHandler() {}
+  function confirmHandler() {
+    navigation.goBack();
+  }
 
   useLayoutEffect(() => {
     navigation.setOptions({
