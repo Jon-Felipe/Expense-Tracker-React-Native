@@ -4,7 +4,8 @@ import React from 'react';
 export default function ExpensesSummary() {
   return (
     <View>
-      <Text>ExpensesSummary</Text>
+      <Text>Period</Text>
+      <Text>sum</Text>
     </View>
   );
 }
