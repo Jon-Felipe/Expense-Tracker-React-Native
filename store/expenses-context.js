@@ -79,7 +79,7 @@ function ExpensesContextProvider({ children }) {
   return (
     <ExpesesContext.Provider
       value={{
-        expenses,
+        expenses: expensesState,
         addExpense,
         deleteExpense,
         updateExpense,
