@@ -10,7 +10,7 @@ export default function ExpenseItem({ description, date, amount }) {
   const { navigate } = useNavigation();
 
   function expensePressHandler() {
-    navigate('ManageExpenses');
+    navigate('ManageExpense');
   }
 
   return (

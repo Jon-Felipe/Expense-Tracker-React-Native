@@ -5,7 +5,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Ionicons } from '@expo/vector-icons';
 
 // screens
-import ManageExpenses from './screens/ManageExpenses';
+import ManageExpense from './screens/ManageExpense';
 import RecentExpenses from './screens/RecentExpenses';
 import AllExpenses from './screens/AllExpenses';
 
@@ -32,7 +32,7 @@ function ExpensesOverview() {
             size={24}
             color={tintColor}
             onPress={() => {
-              navigation.navigate('ManageExpenses');
+              navigation.navigate('ManageExpense');
             }}
           />
         ),
@@ -69,7 +69,12 @@ export default function App() {
     <>
       <StatusBar style='auto' />
       <NavigationContainer>
-        <Stack.Navigator>
+        <Stack.Navigator
+          screenOptions={{
+            headerStyle: { backgroundColor: GlobalStyles.colors.primary500 },
+            headerTintColor: 'white',
+          }}
+        >
           <Stack.Screen
             name='ExpensesOverview'
             component={ExpensesOverview}
@@ -77,7 +82,13 @@ export default function App() {
               headerShown: false,
             }}
           />
-          <Stack.Screen name='ManageExpenses' component={ManageExpenses} />
+          <Stack.Screen
+            name='ManageExpense'
+            component={ManageExpense}
+            options={{
+              presentation: 'modal',
+            }}
+          />
         </Stack.Navigator>
       </NavigationContainer>
     </>
